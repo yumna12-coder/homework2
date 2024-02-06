@@ -14,31 +14,31 @@ class MainApp extends StatelessWidget {
        appBar: AppBar(
         title:  Text('Gallery'),), 
 
-        body: Scrollbar(
-          child: ListView( scrollDirection: Axis.horizontal,
-            children: [
-              Column( crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                              
-                       Image.asset('assets/images/cc.jpg',width: 150,),
-                  
-                      Image.asset('assets/images/ff.jpg',width: 130,),
-                        Image.asset('assets/images/pp.jpg',width: 150,),
-                       Image.asset('assets/images/x.jpg',width: 190,),
-                      ],
-                        
-                    ), Row(   
-                    children: [ Image.asset('assets/images/y.jpg',width: 150,),
-                 Image.asset('assets/images/cc.jpg',width: 150,), Image.asset('assets/images/o.jpg',width: 150,), ] ),
-               Row(children: [ Image.asset('assets/images/ff.jpg',width: 150,),Image.asset('assets/images/w.jpg')],) ],
-              ),
-               
-                    
-           ],
-          ),
+        body: Container(
+          child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount:3 ,mainAxisSpacing: 20,crossAxisSpacing: 20,mainAxisExtent: 200)
+         , children: [Container(child:Image.asset('assets/images/fd.jpg')),
+         Container(child:Image.asset('assets/images/ff.jpg')),
+         Container(child:Image.asset('assets/images/w.jpg')),
+         Container(child:Image.asset('assets/images/x.jpg')),
+         Container(child:Image.asset('assets/images/pp.jpg')),
+         Container(child:Image.asset('assets/images/cc.jpg')),
+         Container(child:Image.asset('assets/images/cx.jpg')),
+         Container(child:Image.asset('assets/images/y.jpg')),
+         Container(child:Image.asset('assets/images/ff.jpg')),
+         Container(child:Image.asset('assets/images/dd.jpg')),
+         Container(child:Image.asset('assets/images/o.jpg')),
+         Container(child:Image.asset('assets/images/fd.jpg')),
+         Container(child:Image.asset('assets/images/w.jpg')),
+         Container(child:Image.asset('assets/images/cc.jpg')),
+         Container(child:Image.asset('assets/images/pp.jpg')),
+         
+         
+         
+         ],)
+
+
+
+        
         ),
         ),
       );
