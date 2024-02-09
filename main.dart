@@ -14,7 +14,22 @@ class MainApp extends StatelessWidget {
        appBar: AppBar(
         title:  Text('Gallery'),), 
 
-        body: Container(
+        body:
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         Container(
           child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount:3 ,mainAxisSpacing: 20,crossAxisSpacing: 20,mainAxisExtent: 200)
          , children: [Container(child:Image.asset('assets/images/fd.jpg')),
          Container(child:Image.asset('assets/images/ff.jpg')),
