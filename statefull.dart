@@ -77,16 +77,18 @@ void _moveUp(){
           children: [
             Positioned(
               left: _imageXPosition,
-              width: 400 ,
+              width: 100 ,
               bottom: _imageYPosition,
        
               child: Column( crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image(
-                    width:_imagewidth ,
-                    image: _marioImage,
-
-              )],
+                  Container(
+                    child: Image(
+                      width:_imagewidth ,
+                      image: _marioImage,
+                    
+                                  ),
+                  )],
               ),
             ),
             Align(

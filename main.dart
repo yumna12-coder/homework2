@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'screens/morio.dart';
+import 'screens/form.dart';
 void main() {
   runApp( MainApp());
 }
@@ -10,53 +11,60 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-       appBar: AppBar(
-        title:  Text('Gallery'),), 
+initialRoute: '/',
+routes:{'/morio':(context)=>ColorChanger(),
+'/form':(context)=>MYFORMP(), },title: 'flutter',
 
-        body:
+
+      home: myhomepage(
+       
+
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         Container(
-          child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount:3 ,mainAxisSpacing: 20,crossAxisSpacing: 20,mainAxisExtent: 200)
-         , children: [Container(child:Image.asset('assets/images/fd.jpg')),
-         Container(child:Image.asset('assets/images/ff.jpg')),
-         Container(child:Image.asset('assets/images/w.jpg')),
-         Container(child:Image.asset('assets/images/x.jpg')),
-         Container(child:Image.asset('assets/images/pp.jpg')),
-         Container(child:Image.asset('assets/images/cc.jpg')),
-         Container(child:Image.asset('assets/images/cx.jpg')),
-         Container(child:Image.asset('assets/images/y.jpg')),
-         Container(child:Image.asset('assets/images/ff.jpg')),
-         Container(child:Image.asset('assets/images/dd.jpg')),
-         Container(child:Image.asset('assets/images/o.jpg')),
-         Container(child:Image.asset('assets/images/fd.jpg')),
-         Container(child:Image.asset('assets/images/w.jpg')),
-         Container(child:Image.asset('assets/images/cc.jpg')),
-         Container(child:Image.asset('assets/images/pp.jpg')),
-         
-         
-         
-         ],)
 
 
 
         
         ),
-        ),
-      );
+        );
+      
     
   }
+}
+class myhomepage extends StatefulWidget {
+  final String routeName='/';
+  @override
+  _myhomepageState createState()=>_myhomepageState();
+}
+class _myhomepageState extends State<myhomepage>{
+@override
+Widget build(BuildContext context){
+return Scaffold(
+  appBar: AppBar(backgroundColor: Colors.red,title: Text('flutter demo'),
+  
+  ),
+body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
+
+children: <Widget>[ElevatedButton(onPressed:(){
+Navigator.pushNamed(context, '/morio');
+},child: Text('Go to Mario page'),
+
+ ),
+ ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/form');
+ }, child: Text('Go to form page '), 
+ ),
+ ElevatedButton(onPressed:(){} , child: Text('go to statefull'))
+  ],
+  
+  
+  
+  ),
+
+
+),
+);
+
+
+}
+
+
 }
